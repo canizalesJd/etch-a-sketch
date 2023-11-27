@@ -4,7 +4,7 @@ const square = document.createElement("div");
 square.classList.add("square");
 
 // To do: convert this to user input
-let gridSize = 16;
+let gridSize = 64;
 
 const createGrid = (gridSize) => {
   for (let i = 0; i < gridSize * gridSize; i++) {
@@ -16,10 +16,11 @@ const createGrid = (gridSize) => {
 
 createGrid(gridSize);
 
+const getGridSize = () => {};
+
 const squares = document.querySelectorAll(".square");
-console.log(squares);
 squares.forEach((square) => {
   square.addEventListener("mouseover", () => {
-    square.style.backgroundColor = "black";
+    square.style.backgroundColor = "#707070";
   });
 });
