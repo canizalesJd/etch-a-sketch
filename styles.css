@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.square {
+  border: 1px solid #9e9e9e;
+}
+
+.square:hover {
+  background-color: #bbb;
+}
+
+.title {
+  text-align: center;
+}
+
+.grid {
+  border: 1px solid #9e9e9e;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  max-width: 90vw;
+  max-height: 90vw;
+  margin: auto;
+}
