@@ -6,6 +6,7 @@
 
 .square {
   border: 1px solid #9e9e9e;
+  cursor: pointer;
 }
 
 .square:hover {
@@ -21,8 +22,8 @@
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   max-width: 90vw;
   max-height: 90vw;
   margin: auto;
