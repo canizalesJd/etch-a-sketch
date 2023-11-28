@@ -52,7 +52,6 @@ body {
   padding: 20px 0px;
   margin: auto;
   flex-wrap: wrap;
-  border: 2px solid red;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -96,11 +95,15 @@ button {
   font-weight: 500;
   border-radius: 10px;
   background-color: #fde659;
-
   outline: none;
   border: none;
   color: #363636;
   flex: 1;
   margin: 10px 10px;
   cursor: pointer;
+}
+
+button:hover {
+  transition: 300ms;
+  background-color: hsl(40, 98%, 67%);
 }

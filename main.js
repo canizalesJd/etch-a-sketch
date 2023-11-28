@@ -14,9 +14,14 @@ const createGrid = (gridSize) => {
   }
 };
 
-createGrid(gridSize);
+const sizeInput = document.querySelector(".grid-size");
+sizeInput.addEventListener("change", () => {
+  gridSize = sizeInput.value;
+  grid.innerHTML = "";
+  createGrid(gridSize);
+});
 
-const getGridSize = () => {};
+createGrid(gridSize);
 
 const squares = document.querySelectorAll(".square");
 squares.forEach((square) => {
