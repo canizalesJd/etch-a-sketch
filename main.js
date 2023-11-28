@@ -46,6 +46,19 @@ sizeInput.addEventListener("change", () => {
   adjustGridSize(sizeInput.value);
 });
 
+const resetGrid = () => {
+  grid.innerHTML = "";
+  init();
+};
+
+const resetButton = document.querySelector(".reset-grid-btn");
+resetButton.addEventListener("click", resetGrid);
+
+const eraserButton = document.querySelector(".eraser-mode-btn");
+eraserButton.addEventListener("click", () => {
+  setSquaresBackground("#d8d8d8");
+});
+
 const init = () => {
   let gridSize = 32;
   createGrid(gridSize);
