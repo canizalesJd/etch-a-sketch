@@ -100,8 +100,14 @@ randomButton.addEventListener("click", () => {
   setSquaresBackground("random");
 });
 
+const colorpicker = document.querySelector(".colorpicker");
+colorpicker.addEventListener("change", () => {
+  setSquaresBackground(colorpicker.value);
+});
+
 const init = () => {
   let gridSize = 32;
+  sizeInput.value = gridSize;
   createGrid(gridSize);
   setSquaresBackground("#707070");
 };
