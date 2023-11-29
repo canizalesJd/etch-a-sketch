@@ -134,3 +134,25 @@ button:hover {
   transition: 300ms;
   background-color: hsl(40, 98%, 67%);
 }
+
+footer {
+  width: 95vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-logo {
+  margin-left: 10px;
+  height: 2rem;
+}
+
+.github-logo:hover {
+  transition: 400ms;
+  transform: scale(1.2);
+}
+
+.year {
+  margin-left: 5px;
+}

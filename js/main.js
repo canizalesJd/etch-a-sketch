@@ -1,3 +1,6 @@
+const year = document.querySelector(".year");
+year.innerHTML = new Date().getFullYear();
+
 const grid = document.querySelector(".grid");
 
 const square = document.createElement("div");
