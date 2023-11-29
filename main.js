@@ -26,7 +26,7 @@ const gradientColor = (square) => {
     break;
   }
   square.style.backgroundColor = `hsl(0, 0%, ${intensity}%)`;
-  if (intensity === 10) {
+  if (intensity === 0) {
     intensity = 100;
   }
 };
