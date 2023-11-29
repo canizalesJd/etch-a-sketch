@@ -11,10 +11,6 @@ const createGrid = (gridSize) => {
   }
 };
 
-const generateGradient = () => {
-  console.log("test");
-};
-
 const randomColor = (square) => {
   const randomR = Math.floor(Math.random() * 255);
   const randomG = Math.floor(Math.random() * 255);
@@ -23,13 +19,27 @@ const randomColor = (square) => {
   square.style.backgroundColor = color;
 };
 
+let intensity = 100;
+const gradientColor = (square) => {
+  while (intensity > 0) {
+    intensity -= 10;
+    break;
+  }
+  square.style.backgroundColor = `hsl(0, 0%, ${intensity}%)`;
+  if (intensity === 10) {
+    intensity = 100;
+  }
+};
+
 const setSquaresBackground = (color) => {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
     square.addEventListener("mouseover", (event) => {
-      if (color === "randomColor") {
-        const square = event.target;
-        randomColor(square);
+      if (color === "random") {
+        randomColor(event.target);
+      }
+      if (color === "gradient") {
+        gradientColor(event.target);
       }
       square.style.backgroundColor = color;
     });
@@ -87,7 +97,7 @@ gradientButton.addEventListener("click", () => {
 
 const randomButton = document.querySelector(".random-mode-btn");
 randomButton.addEventListener("click", () => {
-  setSquaresBackground("randomColor");
+  setSquaresBackground("random");
 });
 
 const init = () => {
