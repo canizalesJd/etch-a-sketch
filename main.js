@@ -11,10 +11,26 @@ const createGrid = (gridSize) => {
   }
 };
 
+const generateGradient = () => {
+  console.log("test");
+};
+
+const randomColor = (square) => {
+  const randomR = Math.floor(Math.random() * 255);
+  const randomG = Math.floor(Math.random() * 255);
+  const randomB = Math.floor(Math.random() * 255);
+  color = `rgb(${randomR}, ${randomG}, ${randomB})`;
+  square.style.backgroundColor = color;
+};
+
 const setSquaresBackground = (color) => {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
-    square.addEventListener("mouseover", () => {
+    square.addEventListener("mouseover", (event) => {
+      if (color === "randomColor") {
+        const square = event.target;
+        randomColor(square);
+      }
       square.style.backgroundColor = color;
     });
   });
@@ -57,6 +73,21 @@ resetButton.addEventListener("click", resetGrid);
 const eraserButton = document.querySelector(".eraser-mode-btn");
 eraserButton.addEventListener("click", () => {
   setSquaresBackground("#d8d8d8");
+});
+
+const grayButton = document.querySelector(".gray-mode-btn");
+grayButton.addEventListener("click", () => {
+  setSquaresBackground("#707070");
+});
+
+const gradientButton = document.querySelector(".gradient-mode-btn");
+gradientButton.addEventListener("click", () => {
+  setSquaresBackground("gradient");
+});
+
+const randomButton = document.querySelector(".random-mode-btn");
+randomButton.addEventListener("click", () => {
+  setSquaresBackground("randomColor");
 });
 
 const init = () => {
